@@ -7,5 +7,16 @@ This repo contains temperature sensor circuit designs, code that runs on a micro
 Version 1: DS18B20  
 Version 2: BME680 [Upcoming]
 
-![Version 1](https://i.ibb.co/tLtbWQL/IMG-20200719-163154.jpg)  
-Version 1 of the sensor attached to a Raspberry Pi
+<p align="center">
+  <img src="https://i.ibb.co/tLtbWQL/IMG-20200719-163154.jpg" width="500" height="666" alt="Version 1 Hardware"/>
+</p>
+<p align="center">
+  <img src="https://i.ibb.co/JzY0sBZ/thermostat.png" alt="Version 1 Hardware"/>
+</p>
+<p align="center">
+  <img src="https://i.ibb.co/gtjVvfm/thermostat-panel.png" alt="Version 1 Hardware"/>
+</p>
+
+
+
+

@@ -8,15 +8,17 @@ Version 1: DS18B20
 Version 2: BME680 [Upcoming]
 
 <p align="center">
-  <img src="https://i.ibb.co/tLtbWQL/IMG-20200719-163154.jpg" width="500" height="666" alt="Version 1 Hardware"/>
+  <img src="https://i.ibb.co/tLtbWQL/IMG-20200719-163154.jpg" height="600" alt="Version 1 Hardware"/>
+  <img src="https://i.ibb.co/gtjVvfm/thermostat-panel.png" height="600" alt="Version 1 Hardware"/>
 </p>
 <p align="center">
-  <img src="https://i.ibb.co/JzY0sBZ/thermostat.png" alt="Version 1 Hardware"/>
-</p>
-<p align="center">
-  <img src="https://i.ibb.co/gtjVvfm/thermostat-panel.png" alt="Version 1 Hardware"/>
+  <img src="https://i.ibb.co/41WF6sR/thermostat.png" alt="Version 1 Hardware"/>
 </p>
 
+### List of Equipment
 
-
-
+DS18B20
+LED of choice + associated resistor (has to be driven from a 3.3V digital signal)
+Raspberry Pi
+Logitech Harmony Hub
+Seperate server (optional)

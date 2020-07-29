@@ -15,22 +15,32 @@ func tempparse() string {
 	fcont := string(data)
 	t := fcont[len(fcont) - 6: len(fcont) - 4] + "." + fcont[len(fcont) - 4: len(fcont) - 1]
 	return t
-
 }
 
 func main() {
 
-	err := rpio.Open()
+	ledstat, err := ioutil.ReadFile("./ledstatus")
 	if err != nil {
-		log.Errorf("could not open memory: %v", err)
+		log.Errorf("Failed to read LED status from file 'ledstatus'", err)
 	}
-	led := rpio.Pin(17)
-	led.Output()
-	led.High()
 
-	fmt.Println(tempparse())
+	if ledstat[0] == 49 {
+		err := rpio.Open()
+		if err != nil {
+			log.Errorf("could not open memory: %v", err)
+		}
+		defer rpio.Close()
 
-	led.Low()
+		led := rpio.Pin(18)
+		led.Output()
+		led.High()
+
+		fmt.Println(tempparse())
+
+		led.Low()
+	} else {
+		fmt.Println(tempparse())
+	}
 
 }
 

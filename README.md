@@ -15,6 +15,7 @@ Version 2: BME680 [Upcoming]
   <img src="https://i.ibb.co/41WF6sR/thermostat.png" alt="Version 1 Hardware"/>
 </p>
 
+## Hardware
 ### List of Equipment
 
 * DS18B20
@@ -22,3 +23,15 @@ Version 2: BME680 [Upcoming]
 * Raspberry Pi
 * Logitech Harmony Hub
 * Seperate server (optional)
+
+## Software
+
+Thermostat data can be exposed to the network in two ways. The preferred way is through webhooks. This project makes use of the very versatile webhook[wh] tool.
+
+Releases of the thermostat software are packaged with webhook binaries that have been tested and pre-configured to work with the thermostat program.
+
+Alternatively, users may choose to make use of the Pi's in-built SSH server to execute the themostat program. This method relies of the generation of SSH keys and ensuring the Home Assistant instance has access to the key. If Home Assistant is run from Docker, the SSH server has to be trusted every time a new container is created (after an upgrade).
+
+
+
+[wh]: https://github.com/adnanh/webhook

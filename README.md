@@ -26,7 +26,7 @@ Version 2: BME680 [Upcoming]
 
 ## Software
 
-Thermostat data can be exposed to the network in two ways. The preferred way is through webhooks. This project makes use of the very versatile webhook[wh] tool.
+Thermostat data can be exposed to the network in two ways. The preferred way is through webhooks. This project makes use of the very versatile [webhook][wh] tool.
 
 Releases of the thermostat software are packaged with webhook binaries that have been tested and pre-configured to work with the thermostat program.
 

@@ -24,9 +24,29 @@ Version 2: BME680 [Upcoming]
 * Logitech Harmony Hub
 * Seperate server (optional)
 
+```
++---------------+           +---------------+  Webhook +----------------+
+|               |  1-Wire   |               +<---------+                |
+|  Temperature  +---------->+   Raspberry   |   WiFi   |  Server with   |
+|    Sensor     |  or I2C   |      Pi       |          | Home Assistant |
+|               |           |               +--------->+                |
++---------------+           +---------------+  Stdout  ++--------------++
+                                                        |              ^
+                                                        |  Harmony API |
+                                                        |     WiFi     |
+                                                        v              |
+                            +---------------+    IR    ++--------------++
+                            |     Cooler    +<---------+                |
+                            +---------------+          |    Logitech    |
+                            +---------------+          |   Harmony Hub  |
+                            |     Heater    +<---------+                |
+                            +---------------+    IR    +----------------+
+```
+Note the server with home assistant could reside on the Raspberry Pi and could run the thermostat program directly instead of through a webhook.
+
 ## Software
 
-Thermostat data can be exposed to the network in two ways. The preferred way is through webhooks. This project makes use of the very versatile [webhook][wh] tool.
+Thermostat data can be exposed to the network in two ways. The preferred way is through webhooks. This project makes use of the very versatile [webhook][wh] tool. Control of the LED can also be accomplished through webhooks.
 
 Releases of the thermostat software are packaged with webhook binaries that have been tested and pre-configured to work with the thermostat program.
 

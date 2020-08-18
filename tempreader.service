@@ -1,5 +1,5 @@
 [Unit]
-Description=Pi Thermostat
+Description=Pi Temperature Sensor Poller
 After=network.target
 StartLimitIntervalSec=0
 

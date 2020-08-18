@@ -18,31 +18,31 @@ Version 2: BME680 [Upcoming]
 ## Hardware
 ### List of Equipment
 
-* DS18B20
+* DS18B20 + 4k7 pullup resistor
 * LED of choice + associated resistor (has to be driven from a 3.3V digital signal)
 * Raspberry Pi
 * Logitech Harmony Hub
 * Seperate server (optional)
 
 ```
-+---------------+           +---------------+  Webhook +----------------+
-|               |  1-Wire   |               +<---------+                |
-|  Temperature  +---------->+   Raspberry   |   WiFi   |  Server with   |
-|    Sensor     |  or I2C   |      Pi       |          | Home Assistant |
-|               |           |               +--------->+                |
-+---------------+           +---------------+  Stdout  ++--------------++
-                                                        |              ^
-                                                        |  Harmony API |
-                                                        |     WiFi     |
-                                                        v              |
-                            +---------------+    IR    ++--------------++
-                            |     Cooler    +<---------+                |
-                            +---------------+          |    Logitech    |
-                            +---------------+          |   Harmony Hub  |
-                            |     Heater    +<---------+                |
-                            +---------------+    IR    +----------------+
+	+---------------+           +---------------+  Webhook +----------------+
+	|               |  1-Wire   |               +<---------+                |
+	|  Temperature  +---------->+   Raspberry   |   WiFi   |  Server with   |
+	|    Sensor     |  or I2C   |      Pi       |          | Home Assistant |
+	|               |           |               +--------->+                |
+	+---------------+           +---------------+  Stdout  ++--------------++
+								|              ^
+								|  Harmony API |
+								|     WiFi     |
+								v              |
+				    +---------------+    IR    ++--------------++
+				    |     Cooler    +<---------+                |
+				    +---------------+          |    Logitech    |
+				    +---------------+          |   Harmony Hub  |
+				    |     Heater    +<---------+                |
+				    +---------------+    IR    +----------------+
 ```
-Note the server with home assistant could reside on the Raspberry Pi and could run the thermostat program directly instead of through a webhook.
+The server with home assistant could reside on the Raspberry Pi and could run the thermostat program directly instead of through a webhook.
 
 ## Software
 

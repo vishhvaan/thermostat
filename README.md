@@ -20,7 +20,7 @@ Version 2: BME680 [Upcoming]
 
 * DS18B20 + 4k7 pullup resistor
 * LED of choice + associated resistor (has to be driven from a 3.3V digital signal)
-* Raspberry Pi
+* Raspberry Pi (or ESP8266 support upcoming)
 * Logitech Harmony Hub
 * Seperate server (optional)
 

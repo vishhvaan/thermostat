@@ -1,0 +1,18 @@
+[
+	{
+	      "id": "temp-hook",
+	      "execute-command": "/home/pi/thermostat/tempreader",
+	      "command-working-directory": "/home/pi/thermostat",
+	      "include-command-output-in-response": true
+	},
+	{
+	      "id": "led-on",
+	      "execute-command": "/home/pi/thermostat/led_on.sh",
+	      "command-working-directory": "/home/pi/thermostat"
+	},
+	{
+	      "id": "led-off",
+	      "execute-command": "/home/pi/thermostat/led_off.sh",
+	      "command-working-directory": "/home/pi/thermostat"
+	}
+]
